@@ -477,9 +477,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         if (mTapToWake != null) {
-            final SharedPreferences prefs =
-                    PreferenceManager.getDefaultSharedPreferences(getActivity());
-            mTapToWake.setChecked(prefs.getBoolean(KEY_TAP_TO_WAKE, true));
+            mTapToWake.setChecked(TapToWake.isEnabled());
         }
 
         // Default value for wake-on-plug behavior from config.xml
@@ -597,9 +595,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     mWakeWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
             return true;
         } else if (preference == mTapToWake) {
-            final SharedPreferences prefs =
-                    PreferenceManager.getDefaultSharedPreferences(getActivity());
-            prefs.edit().putBoolean(KEY_TAP_TO_WAKE, mTapToWake.isChecked()).commit();
             return TapToWake.setEnabled(mTapToWake.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -676,7 +671,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public static void restore(Context ctx) {
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         if (isAdaptiveBacklightSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_ADAPTIVE_BACKLIGHT, true);
+            final boolean enabled = prefs.getBoolean(KEY_ADAPTIVE_BACKLIGHT,
+                    AdaptiveBacklight.isEnabled());
             if (!AdaptiveBacklight.setEnabled(enabled)) {
                 Log.e(TAG, "Failed to restore adaptive backlight settings.");
             } else {
@@ -685,7 +681,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         if (isSunlightEnhancementSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_SUNLIGHT_ENHANCEMENT, false);
+            final boolean enabled = prefs.getBoolean(KEY_SUNLIGHT_ENHANCEMENT,
+                    SunlightEnhancement.isEnabled());
             if (SunlightEnhancement.isAdaptiveBacklightRequired() &&
                     !AdaptiveBacklight.isEnabled()) {
                 SunlightEnhancement.setEnabled(false);
@@ -700,7 +697,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         if (isColorEnhancementSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_COLOR_ENHANCEMENT, true);
+            final boolean enabled = prefs.getBoolean(KEY_COLOR_ENHANCEMENT,
+                    ColorEnhancement.isEnabled());
             if (!ColorEnhancement.setEnabled(enabled)) {
                 Log.e(TAG, "Failed to restore color enhancement settings.");
             } else {
@@ -709,7 +707,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         if (isTapToWakeSupported()) {
-            final boolean enabled = prefs.getBoolean(KEY_TAP_TO_WAKE, true);
+            final boolean enabled = prefs.getBoolean(KEY_TAP_TO_WAKE,
+                    TapToWake.isEnabled());
             if (!TapToWake.setEnabled(enabled)) {
                 Log.e(TAG, "Failed to restore tap-to-wake settings.");
             } else {
