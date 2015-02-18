@@ -325,8 +325,6 @@
   <string name="root_access_apps">تطبيقات فقط</string>
   <string name="root_access_adb">ADB فقط</string>
   <string name="root_access_all">تطبيقات و ADB</string>
-  <string name="update_recovery_title">تحديث recovery CM</string>
-  <string name="update_recovery_summary">تحديث عند تثبيت تحديثات النظام</string>
   <string name="ok">موافق</string>
   <string name="quiet_hours_title">ساعات هادئة</string>
   <string name="quiet_hours_summary">تكوين ساعات الجهاز يجب أن تكون هادئة</string>
@@ -407,7 +405,6 @@
   <string name="changelog_error">غير قادر على تحميل التغيير</string>
   <string name="contributor_cloud_title">المساهمون</string>
   <string name="cmupdate_settings_title">تحديثات CyanogenMod</string>
-  <string name="cmupdate_settings_summary">التحقق من وجود أو عرض أو تثبيت التحديثات المتوفرة</string>
   <string name="development_tools_title">بدء تشغيل أدوات</string>
   <string name="allow_mock_sms">السماح بالرسائل القصيرة صورية</string>
   <string name="privacy_settings_cyanogenmod_title">الخصوصية</string>

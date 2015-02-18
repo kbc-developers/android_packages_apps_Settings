@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Ukendt profil</string>
   <string name="profile_add_nfc_text">Dette NFC-tag refererer til en ukendt profil. Fastgørelse af denne NFC-tag til en eksisterende profil, vil give mulighed for at vælge profilen i fremtiden.</string>
   <string name="profile_select">Vælg profil</string>
+  <string name="profile_remove_dialog_message">Fjern profil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigurér profilen vha. aktuelle enhedsindstillinger?</string>
+  <string name="profile_menu_fill_from_state">Importér aktuelle enhedsindstillinger</string>
   <string name="profile_name_title">Navn</string>
   <string name="profile_profile_name_prompt">Angiv et navn for den nye profil</string>
   <string name="menu_new_profile">Ny profil</string>
@@ -361,8 +364,6 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="root_access_apps">Kun apps</string>
   <string name="root_access_adb">Kun ADB</string>
   <string name="root_access_all">Apps og ADB</string>
-  <string name="update_recovery_title">Opdatér CM-recovery</string>
-  <string name="update_recovery_summary">Opdatér recovery ved installation af systemopdateringer</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Stille timer</string>
   <string name="quiet_hours_summary">Konfigurér timerne, hvor enheden skal være stille</string>
@@ -442,7 +443,6 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="changelog_error">Kunne ikke indlæse ændringsloggen</string>
   <string name="contributor_cloud_title">Bidragydere</string>
   <string name="cmupdate_settings_title">CyanogenMod-opdateringer</string>
-  <string name="cmupdate_settings_summary">Tjek for, se eller installér tilgængelige opdateringer</string>
   <string name="development_tools_title">Start Værktøjer</string>
   <string name="allow_mock_sms">Tillad simuleret SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Privatliv</string>
@@ -1001,8 +1001,12 @@ Yderligere indstillinger er tilgængelige ved at trykke længe på en linje. Ved
   <string name="profile_setup_setup_triggers_title_config">Ændre udløsere: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Trin 2: Opsætning af handlinger</string>
   <string name="profile_setup_actions_title_config">Omkonfigurere handlinger</string>
-  <string name="no_bluetooth_triggers">Ingen Bluetooth udløsere tilgængelige</string>
-  <string name="no_wifi_triggers">Ingen Wi\u2011Fi-udløsere tilgængelige</string>
+  <string name="no_bluetooth_triggers">Ingen Bluetooth-enheder parret.\nTryk for at parre en Bluetooth-enhed, før du konfigurerer udløsere.</string>
+  <string name="no_wifi_triggers">Ingen Wi\u2011Fi-adgangspunkter konfigureret.\nTryk for at forbinde til Wi\u2011Fi, før du konfigurerer udløsere.</string>
   <string name="profile_setup_setup_triggers_description">Vælg venligst udløsere som vil aktivere denne profil</string>
   <string name="profile_setup_actions_description">Nu skal du konfigurere hvad der sker når profilen er aktiveret</string>
+  <string name="profile_triggers_header">Udløsere, som vil aktivere denne profil</string>
+  <string name="no_triggers_configured">Ingen udløsere er konfigureret. Tryk her for at tilføje flere.</string>
+  <string name="no_triggers_configured_nfc">Tryk for at konfigurere en ny NFC-udløser.</string>
+  <string name="sound_ringtone_multisim_options">Skift standardringetone</string>
 </resources>

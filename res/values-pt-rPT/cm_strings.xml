@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Perfil desconhecido</string>
   <string name="profile_add_nfc_text">Esta etiqueta NFC refere-se a um perfil desconhecido. Anexar esta etiqueta NFC num perfil existente permitirá selecionar o perfil no futuro.</string>
   <string name="profile_select">Selecionar perfil</string>
+  <string name="profile_remove_dialog_message">Eliminar perfil %1$s?</string>
+  <string name="profile_populate_profile_from_state">Configurar o perfil utilizando as definições atuais do dispositivo?</string>
+  <string name="profile_menu_fill_from_state">Importar as definições atuais do dispositivo</string>
   <string name="profile_name_title">Nome</string>
   <string name="profile_profile_name_prompt">Introduza um nome para o novo perfil</string>
   <string name="menu_new_profile">Novo perfil</string>
@@ -353,8 +356,10 @@
   <string name="root_access_apps">Só aplicações</string>
   <string name="root_access_adb">Só ADB</string>
   <string name="root_access_all">Aplicações e ADB</string>
-  <string name="update_recovery_title">Atualização da recuperação CM</string>
-  <string name="update_recovery_summary">Atualizar a recuperação CM quando instalar as atualizaçoes de sistema</string>
+  <string name="update_recovery_title">Atualizar a recuperação Cyanogen</string>
+  <string name="update_recovery_summary">Atualizar a recuperação Cyanogen quando instalar as atualizações de sistema</string>
+  <string name="update_recovery_on_warning">Aviso: Quando este recurso estiver ativado, a sua recuperação instalada será substituída por uma incluída na versão atual do SO.\n\nA sua recuperação será atualizada juntamente com as atualizações do seu sistema, ajudando a garantir a compatibilidade com futuras versões.\n\nQuer ativar este recurso?</string>
+  <string name="update_recovery_off_warning">Aviso: Quando este recurso está desativado, a sua recuperação instalada não será atualizada com o SO.\n\nFuturas atualizações do SO poderão não se instalar com uma versão da recuperação desatualizada ou personalizada.\n\nQuer desativar este recurso?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Horas de silêncio</string>
   <string name="quiet_hours_summary">Configurar as horas em que o dispositivo se deve manter em silêncio</string>
@@ -434,7 +439,6 @@
   <string name="changelog_error">Ocorreu um problema a carregar a lista de alterações</string>
   <string name="contributor_cloud_title">Colaboradores</string>
   <string name="cmupdate_settings_title">Atualizações</string>
-  <string name="cmupdate_settings_summary">Verificar, ver ou instalar atualizações disponíveis</string>
   <string name="development_tools_title">Ferramentas avançadas</string>
   <string name="allow_mock_sms">Permitir a simulação SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Privacidade</string>
@@ -993,8 +997,12 @@
   <string name="profile_setup_setup_triggers_title_config">Modificar atuadores: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Passo 2: Definir ações</string>
   <string name="profile_setup_actions_title_config">Redefinir ações</string>
-  <string name="no_bluetooth_triggers">Sem atuadores bluetooth disponíveis</string>
-  <string name="no_wifi_triggers">Sem atuadores Wi\u2011Fi disponíveis</string>
+  <string name="no_bluetooth_triggers">Não há dispositivos bluetooth emparelhados. \nToque para emparelhar um dispositivo bluetooth antes de configurar os atuadores.</string>
+  <string name="no_wifi_triggers">Não há pontos de acesso wi\u2011fi configurados.\nToque para conectar o wi\u2011fi antes de configurar os atuadores.</string>
   <string name="profile_setup_setup_triggers_description">Por favor selecione os atuadores que ativarão este perfil</string>
   <string name="profile_setup_actions_description">Agora configure o que acontece quando o perfil é ativado</string>
+  <string name="profile_triggers_header">Atuadores que ativarão este perfil</string>
+  <string name="no_triggers_configured">Não há atuadores configurados. Toque para adicionar.</string>
+  <string name="no_triggers_configured_nfc">Toque para establecer um novo atuador NFC.</string>
+  <string name="sound_ringtone_multisim_options">Alterar os toques padrão</string>
 </resources>

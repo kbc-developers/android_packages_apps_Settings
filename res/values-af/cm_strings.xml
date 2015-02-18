@@ -58,6 +58,9 @@
   <string name="profile_unknown_nfc_tag">Onbekende profiel</string>
   <string name="profile_add_nfc_text">Hierdie NFC merker verwys na \'n onbekende profiel. Heg hierdie NFC merker aan \'n bestaande profiel om die nuwe profiel in die toekoms te kies.</string>
   <string name="profile_select">Kies profiel</string>
+  <string name="profile_remove_dialog_message">Verwyder profiel %1$s?</string>
+  <string name="profile_populate_profile_from_state">Konfigureer profiel instellings van huidige toestel?</string>
+  <string name="profile_menu_fill_from_state">Voer instellings in van huidige toestel instellings</string>
   <string name="profile_name_title">Naam</string>
   <string name="profile_profile_name_prompt">Tik \'n naam vir die nuwe profiel</string>
   <string name="menu_new_profile">Nuwe profiel</string>
@@ -82,6 +85,8 @@
   <string name="connection_state_disabled">Gedeaktiveer</string>
   <string name="connection_state_enabled">Geaktiveer</string>
   <string name="volume_override_summary">Stel na %1$s/%2$s</string>
+  <string name="volume_override_summary_no_override">Moenie omseil</string>
+  <string name="profile_volume_override_checkbox_label">Ignoreer volume</string>
   <string name="profile_profiles_manage">Profiele</string>
   <string name="profile_profile_manage">Bestuur profiel</string>
   <string name="profile_appgroups_manage">Program groepe</string>
@@ -127,8 +132,10 @@
   <string name="link_volume_mutes">Demping affekteer ook kennisgewings</string>
   <string name="volume_keys_control_ring_stream">Die volume knoppies beheer luitoon volume</string>
   <string name="ring_mode_title">Luimetode</string>
+  <string name="ring_mode_normal">Luitoon</string>
   <string name="ring_mode_vibrate">Vibreer</string>
   <string name="ring_mode_mute">Gedemp</string>
+  <string name="ring_mode_unchanged">Onveranderd</string>
   <string name="volume_overlay_title">Volume-paneel styl</string>
   <string name="volume_overlay_single">Enkel</string>
   <string name="volume_overlay_expandable">Uitbreidbaar</string>
@@ -263,6 +270,7 @@
   <string name="title_tile_volume">Volume</string>
   <string name="title_tile_expanded_desktop">Uitgebreide lessenaar</string>
   <string name="title_tile_network_adb">ADB oor netwerk</string>
+  <string name="title_tile_themes">Temas</string>
   <string name="title_dynamic_tiles">Dinamiese teëls</string>
   <string name="dynamic_tiles_note_title">Nota:</string>
   <string name="dynamic_tiles_note_summary">Dinamiese teëls sal alleenlik verskyn deur \'n stelsel gebeurtenis</string>
@@ -292,6 +300,8 @@
   <string name="cm_sound_mode_sound">Klanke</string>
   <string name="cm_sound_mode_soundVibrate">Klank en vibrasie</string>
   <string name="pref_location_mode_title">Ligging modes</string>
+  <string name="pref_location_mode_summary">Ontmerk alle modes vir standaard gedrag</string>
+  <string name="cm_location_mode_off">Ligging af</string>
   <string name="cm_location_mode_battery_saving">Battery besparend</string>
   <string name="cm_location_mode_device_only">Toestel alleenlik</string>
   <string name="cm_location_mode_high_accuracy">Hoë akkuraatheid</string>
@@ -357,8 +367,10 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="root_access_apps">Slegs programme</string>
   <string name="root_access_adb">Slegs ADB</string>
   <string name="root_access_all">Programme en ADB</string>
-  <string name="update_recovery_title">Dateer CM \'recovery\' op</string>
-  <string name="update_recovery_summary">Dateer \'recovery\' op by die installering van stelsel opgraderings</string>
+  <string name="update_recovery_title">Opdateer Cyanogen \'recovery\'</string>
+  <string name="update_recovery_summary">Opdateer \'recovery\' met stelsel opdaterings</string>
+  <string name="update_recovery_on_warning">KENNISGEWING: Wanneer hierdie funksie geaktiveer is, sal jou geïnstalleerde \'recovery\' vervang word deur een ingesluit met die huidige weergawe van die OS\n\nJou \'recovery\' sal opgedateer word saam met die opgraderings aan jou stelsel, dit help om versoenbaarheid te verseker van toekomstige weergawes.\n\nWil jy hierdie funksie aktiveer?</string>
+  <string name="update_recovery_off_warning">WAARSKUWING: Wanneer hierdie funksie afgeskakel is, sal jou geïnstalleerde \'recovery\' nie opgedateer word met OS opgraderings nie.\n\nToekomstige OS opdaterings kan dalk nie geïnstalleer word met verouderde of persoonlike \'recovery\' weergawes nie.\n\nWil jy regtig hierdie funksie af skakel?</string>
   <string name="ok">OK</string>
   <string name="quiet_hours_title">Stille-ure</string>
   <string name="quiet_hours_summary">Konfigureer die ure wat die toestel moet stil wees</string>
@@ -438,7 +450,6 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="changelog_error">Kan nie Veranderinge-log laai nie</string>
   <string name="contributor_cloud_title">Bydraers</string>
   <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
-  <string name="cmupdate_settings_summary">Soek vir of installeer beskikbare opgraderings</string>
   <string name="development_tools_title">Gereedskap</string>
   <string name="allow_mock_sms">Laat skyn SMS toe</string>
   <string name="privacy_settings_cyanogenmod_title">Privaatheid</string>
@@ -997,8 +1008,12 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="profile_setup_setup_triggers_title_config">Verander snellers: <xliff:g id="profile_name">%1$s</xliff:g></string>
   <string name="profile_setup_actions_title">Stap 2: Stel aksies</string>
   <string name="profile_setup_actions_title_config">Herkonfigureer aksies</string>
-  <string name="no_bluetooth_triggers">Geen Bluetooth snellers beskikbaar nie</string>
-  <string name="no_wifi_triggers">Geen Wi\u2011Fi snellers beskikbaar</string>
+  <string name="no_bluetooth_triggers">Geen Bluetooth toestelle gepaar.\nRaak om met Bluetooth te paar voordat jy jou snellers opstel.</string>
+  <string name="no_wifi_triggers">Geen  Wi\u2011Fi toestelle opgestel.\nRaak om jou Wi\u2011Fi op te stel voordat jy jou snellers opstel.</string>
   <string name="profile_setup_setup_triggers_description">Kies snellers wat die profiel sal aktiveer</string>
   <string name="profile_setup_actions_description">Nou stel wat gebeur wanneer die profiel geaktiveer word</string>
+  <string name="profile_triggers_header">Snellers wat jou profiel sal aktiveer</string>
+  <string name="no_triggers_configured">Geen snellers op gestel. Raak om nog by te voeg.</string>
+  <string name="no_triggers_configured_nfc">Raak om NFC sneller op te stel.</string>
+  <string name="sound_ringtone_multisim_options">Verander verstek luitone</string>
 </resources>
